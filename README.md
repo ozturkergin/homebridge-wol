@@ -272,6 +272,6 @@ The `Localhost` accessory represents the same instance as that running the Homeb
 To update the plugin using a `.tgz` file over SSH, you can use the `hb-service add` command:
 
 ```bash
-ssh <user>@<host> "hb-service add homebridge-wol-ergin@https://github.com/ozturkergin/homebridge-wol/releases/download/v1.0.0/homebridge-wol-ergin-1.0.0.tgz"
+ssh <user>@<host> "sudo hb-service add homebridge-wol-ergin@https://github.com/ozturkergin/homebridge-wol/raw/main/homebridge-wol-ergin-1.0.0.tgz"
 ```
 
