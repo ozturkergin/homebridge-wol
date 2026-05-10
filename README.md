@@ -1,19 +1,6 @@
 <p align="center">
   <img src=".github/banner.png">
 </p>
-<p align="center">
-  <a href="https://www.npmjs.com/package/homebridge-wol-ergin">
-    <img src="https://flat.badgen.net/npm/v/homebridge-wol-ergin" alt="npm version" />
-  </a>
-  <a href="https://www.npmjs.com/package/homebridge-wol-ergin">
-    <img src="https://flat.badgen.net/npm/dy/homebridge-wol-ergin" alt="npm downloads per year" />
-  </a>
-  <a href="https://github.com/homebridge/homebridge/wiki/Verified-Plugins">
-    <img src="https://flat.badgen.net/badge/homebridge/verified/purple" alt="Verified by Homebridge" />
-  </a>
-  <br>
-  <strong><a href="#quickstart">Quick Start</a></strong>
-</p>
 
 # A Wake on Lan plugin for Homebridge
 
@@ -23,10 +10,10 @@
 
 ## Quick Start
 
-To install the plugin, head over to the machine with Homebridge set up and run the following command:
+To install the plugin using a `.tgz` file over SSH, you can use the `hb-service add` command:
 
-```
-npm install -g homebridge-wol-ergin
+```bash
+ssh <user>@<host> "sudo hb-service add homebridge-wol-ergin@https://github.com/ozturkergin/homebridge-wol/raw/main/homebridge-wol-ergin-1.0.0.tgz"
 ```
 
 Add your devices to your `config.json`:
@@ -211,22 +198,6 @@ The Raspberry Pi example uses the `sshpass` package to sign in on the remote hos
 
 Using username and passwords in a command is **heavily discouraged** as this stores them in the configuration file in plaintext. Use other authentication methods or environment variables instead.
 
-<a id="contribute"></a>
-
-## Contribute
-
-Any contribution is welcome.
-
-### Contributors
-
-Beyond all helpful issues and wiki posts, this repository has seen modifications from these helpful contributors:
-
-| [<img src="https://github.com/identicons/ergin.png" width="60px;" width="60px;"/><br /><sub><b>@ergin</b></sub>](https://github.com/ergin)<br /> <sub>Author</sub> | [<img src="https://avatars1.githubusercontent.com/u/14974112?v=4" width="60px;" width="60px;"/><br /><sub><b>@AlexGustafsson</b></sub>](https://github.com/AlexGustafsson)<br /> <sub>Original Author</sub>  | [<img src="https://avatars1.githubusercontent.com/u/1850718?v=4" width="60px;" width="60px;"/><br /><sub><b>@cr3ative</b></sub>](https://github.com/cr3ative)<br /> <sub>Previous collaborator</sub> |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|       [<img src="https://avatars1.githubusercontent.com/u/171494?v=4" width="60px;" width="60px;"/><br /><sub><b>@blubber</b></sub>](https://github.com/blubber)<br /> <sub>Contributor</sub>        | [<img src="https://avatars1.githubusercontent.com/u/727711?v=4" width="60px;" width="60px;"/><br /><sub><b>@lnxbil</b></sub>](https://github.com/lnxbil)<br /> <sub>Contributor</sub> | [<img src="https://avatars1.githubusercontent.com/u/813112?v=4" width="60px;" width="60px;"/><br /><sub><b>@residentsummer</b></sub>](https://github.com/residentsummer)<br /> <sub>Contributor</sub>  |
-|           [<img src="https://avatars1.githubusercontent.com/u/3981445?v=4" width="60px;"/><br /><sub><b>@tanmaster</b></sub>](https://github.com/tanmaster)<br /> <sub>Contributor</sub>           |           [<img src="https://avatars0.githubusercontent.com/u/5369727?v=4" width="60px;"/><br /><sub><b>@HenrySeed</b></sub>](https://github.com/HenrySeed)<br /> <sub>Logo designer</sub>            |             [<img src="https://avatars0.githubusercontent.com/u/4703128?v=4" width="60px;"/><br /><sub><b>@conao3</b></sub>](https://github.com/conao3)<br /> <sub>Contributor</sub>              |
-|     [<img src="https://avatars.githubusercontent.com/u/33500036?s=60&v=4" width="60px;"/><br /><sub><b>@joriskleiber</b></sub>](https://github.com/joriskleiber)<br /> <sub>joriskleiber</sub>     |                                                                                                                                                                                                       |                                                                                                                                                                                                   |
-
 ### Development
 
 ```
@@ -266,12 +237,3 @@ The accessory `MacBook Pro` is fully hooked up to simulate a real world MacBook,
 The `Generic` accessory features regular pinging using ICMP messages over IPv4.
 
 The `Localhost` accessory represents the same instance as that running the Homebridge server. It features only mock configuration. It does feature the full range of configurations available, which should help debugging the configuration UI.
-
-### Update via SSH
-
-To update the plugin using a `.tgz` file over SSH, you can use the `hb-service add` command:
-
-```bash
-ssh <user>@<host> "sudo hb-service add homebridge-wol-ergin@https://github.com/ozturkergin/homebridge-wol/raw/main/homebridge-wol-ergin-1.0.0.tgz"
-```
-
