@@ -1,6 +1,6 @@
 {
   "name": "homebridge-wol-ergin",
-  "displayName": "Homebridge WoL Ergin",
+  "displayName": "Homebridge WoL",
   "version": "1.0.0",
   "description": "A Wake on Lan plugin for Homebridge",
   "main": "dist/index.js",
